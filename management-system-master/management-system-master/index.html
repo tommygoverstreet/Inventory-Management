@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html
+ lang="en"
+ data-theme="dark"
+>
+
+ <head>
+  <meta charset="UTF-8">
+  <meta
+   name="viewport"
+   content="width=device-width, initial-scale=1.0"
+  >
+  <title>Management System</title>
+  <link
+   rel="stylesheet"
+   href="st.css"
+  >
+  <style>
+   .max-650 {
+    max-width: 650px;
+   }
+
+   #total {
+    font-size: 2.5rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+   }
+  </style>
+ </head>
+
+ <body class="bg-light">
+  <div class="container">
+   <div class="max-650">
+    <div class="crud">
+     <div class="head">
+      <h2 class="p-1">Cruds </h2>
+      <p class="p-1">Project Managment system</p>
+     </div>
+
+     <div class="inputs p-1">
+      <input
+       type="text"
+       placeholder="Product"
+       id="title"
+      >
+      <div class="row">
+       <div class="price">
+        <input
+         type="number"
+         onkeyup="calc()"
+         placeholder="Price"
+         id="price"
+        >
+        <input
+         type="number"
+         onkeyup="calc()"
+         placeholder="Taxes"
+         id="taxes"
+        >
+        <div class="">
+         <input
+          type="number"
+          onkeyup="calc()"
+          placeholder="ads"
+          id="ads"
+         >
+         <input
+          type="number"
+          onkeyup="calc()"
+          placeholder="Discount"
+          id="discount"
+         >
+        </div>
+       </div>
+       <div class="row a-center j-center gap-2">
+        <div class="bg-light col container a-center j-center">
+         <p><strong
+           id="total"
+           class="p-2 bg-primary"
+          > $0</strong></p>
+        </div>
+       </div>
+      </div>
+      <input
+       type="number"
+       placeholder="Count"
+       id="count"
+      >
+      <input
+       type="text"
+       placeholder="Category"
+       id="category"
+      >
+      <button
+       type="button"
+       id="create"
+       onclick="create()"
+       class="btn bg-primary"
+      >Create</button>
+     </div>
+
+     <!-- Button id: da-->
+     <button
+      type="button"
+      id="da"
+      onclick="getdata()"
+      class="btn bg-primary"
+     >Get Data</button>
+
+     <div class="outputs">
+      <input
+       type="text"
+       id="searchinp"
+       placeholder="Search"
+       onkeyup="getsearchdata(this.value)"
+      >
+     
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="p-2">
+   <h2>Product Table</h2>
+   <table class="table-responsive">
+    <thead>
+     <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>price</th>
+      <th>ads</th>
+      <th>taxes</th>
+      <th>discount</th>
+      <th>total</th>
+      <th>category</th>
+      <th class="upd">update</th>
+      <th class="del">delete</th>
+     </tr>
+    </thead>
+    <tbody>
+    </tbody>
+   </table>
+  </div>
+  <script src="main.js"></script>
+ </body>
+
+</html>
